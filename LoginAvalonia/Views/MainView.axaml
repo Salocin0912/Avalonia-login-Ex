@@ -1,0 +1,33 @@
+<UserControl xmlns="https://github.com"
+             xmlns:x="http://microsoft.com"
+             xmlns:d="http://microsoft.com"
+             xmlns:mc="http://openxmlformats.org"
+             xmlns:vm="using:LoginAvalonia.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="LoginAvalonia.Views.MainView"
+             x:DataType="vm:MainViewModel">
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <!-- StackPanel -->
+    <StackPanel Spacing="20" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280">
+        
+        <!-- TextBlock di benvenuto -->
+        <TextBlock Text="{Binding Greeting}" 
+                   HorizontalAlignment="Center" 
+                   TextAlignment="Center" 
+                   TextWrapping="Wrap"/>
+
+        <!-- TextBox per inserire il nome -->
+        <TextBox Text="{Binding NomeUtente, Mode=TwoWay}" 
+                 Watermark="Inserisci il tuo nome..."/>
+
+        <!-- Pulsante per effettuare l'accesso -->
+        <Button HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                Command="{Binding LoginCommand}"
+                Content="{Binding StatusLogin}"/>
+        
+    </StackPanel>
+</UserControl>
