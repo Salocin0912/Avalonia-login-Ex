@@ -29,7 +29,7 @@ public partial class MainViewModel : ViewModelBase
     // Metodo parziale generato dal Toolkit: si attiva automaticamente al cambio di selezione
     partial void OnSelectedNameChanged(string? value)
     {
-        // Se l'utente loggato, aggiorna il messaggio 
+        // Se l'utente è loggato, aggiorna il messaggio di conseguenza 
         if (_isLoggedIn && !string.IsNullOrEmpty(value))
         {
             Greeting = "Benvenuto/a " + value;

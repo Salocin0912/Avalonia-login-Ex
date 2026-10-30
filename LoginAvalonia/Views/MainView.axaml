@@ -13,7 +13,7 @@
     <!-- StackPanel -->
     <StackPanel Spacing="20" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280">
         
-        <!-- TextBlock di benvenuto -->
+        <!-- TextBlock di benvenuto/Greeting -->
         <TextBlock Text="{Binding Greeting}" 
                    HorizontalAlignment="Center" 
                    TextAlignment="Center" 
