@@ -17,12 +17,23 @@
         <TextBlock Text="{Binding Greeting}" 
                    HorizontalAlignment="Center" 
                    TextAlignment="Center" 
-                   TextWrapping="Wrap"/>
+                   TextWrapping="Wrap"
+                   FontSize="18"
+                   FontWeight="Bold"/>
 
-        <!-- TextBox per inserire il nome -->
-        <TextBox Text="{Binding NomeUtente, Mode=TwoWay}" 
-                 PlaceholderText="Inserisci il tuo nome..."/>
-
+        <!-- ListBox per selezione nome -->
+        <StackPanel Spacing="5">
+            <TextBlock Text="Seleziona un nome dall'elenco:" FontSize="12" Foreground="Gray"/>
+            <ListBox ItemsSource="{Binding Names}" 
+                     SelectedItem="{Binding SelectedName}" 
+                     Height="120"/>
+        </StackPanel>
+        
+        <!-- TextBox modificata in campo Password + aggiunta carattere "special"  -->
+        <TextBox PasswordChar="*" 
+                 Watermark="Inserisci la password 🗣️️🔥" 
+                 Text="{Binding Password}"/>
+        
         <!-- Pulsante per effettuare l'accesso -->
         <Button HorizontalAlignment="Stretch"
                 HorizontalContentAlignment="Center"
